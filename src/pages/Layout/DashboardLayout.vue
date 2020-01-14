@@ -4,14 +4,14 @@
 
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/dashboard">
-        <md-icon>dashboard</md-icon>
-        <p>Dashboard</p>
-      </sidebar-link>
       <sidebar-link to="/user">
         <md-icon>person</md-icon>
         <p>Meu Perfil</p>
       </sidebar-link>
+      <sidebar-link to="/dashboard">
+        <md-icon>dashboard</md-icon>
+        <p>Resumo</p>
+      </sidebar-link>      
       <sidebar-link to="/table">
         <md-icon>content_paste</md-icon>
         <p>Table list</p>
