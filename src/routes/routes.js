@@ -8,6 +8,7 @@ import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
 import Notifications from "@/pages/Notifications.vue";
 import UpgradeToPRO from "@/pages/UpgradeToPRO.vue";
+import { authGuard } from "@/auth/authGuard.js";
 
 const routes = [
   {
@@ -58,7 +59,7 @@ const routes = [
         name: "Upgrade to PRO",
         component: UpgradeToPRO
       }
-    ]
+    ],
   }
 ];
 

@@ -17,6 +17,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App";
+import { Auth0Plugin } from "./auth";
+import { domain, clientId } from "../auth_config.json";
 
 // router setup
 import routes from "./routes/routes";
@@ -44,6 +46,19 @@ Vue.use(MaterialDashboard);
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
 Vue.use(Notifications);
+
+// Install the authentication plugin here
+Vue.use(Auth0Plugin, {
+  domain,
+  clientId,
+  onRedirectCallback: appState => {
+    router.push(
+      appState && appState.targetUrl
+        ? appState.targetUrl
+        : window.location.pathname
+    );
+  }
+});
 
 /* eslint-disable no-new */
 new Vue({
