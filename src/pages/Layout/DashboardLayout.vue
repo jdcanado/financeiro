@@ -37,10 +37,14 @@
         <p>Upgrade to PRO</p>
       </sidebar-link>
     </side-bar>
-
-    <md-button @click="login()" v-if="!$auth.isAuthenticated">Entrar
-      <md-icon>unarchive</md-icon>
-    </md-button> 
+    
+    <side-bar v-if="!$auth.isAuthenticated">
+      <mobile-menu slot="content"></mobile-menu>
+      <sidebar-link to="/login">
+        <md-icon>person</md-icon>
+        <p>Entrar</p>
+      </sidebar-link>
+    </side-bar>
     
     <div class="main-panel">
       <top-navbar></top-navbar>
