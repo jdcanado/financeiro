@@ -106,4 +106,3 @@ export const Auth0Plugin = {
     Vue.prototype.$auth = useAuth0(options);
   }
 };
-
