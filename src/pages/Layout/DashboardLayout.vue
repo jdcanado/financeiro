@@ -38,7 +38,7 @@
       </sidebar-link>
     </side-bar>
     
-    <side-bar v-if="!$auth.isAuthenticated">
+    <side-bar v-if="!$auth.isAuthenticated && !$auth.loading">
       <mobile-menu slot="content"></mobile-menu>
         <sidebar-link to="/login">
 	   <md-button class="md-icon-button" @click.prevent="login">
