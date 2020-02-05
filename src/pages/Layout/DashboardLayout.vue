@@ -33,8 +33,10 @@
         <p>Notifications</p>
       </sidebar-link>
       <sidebar-link to="/upgrade" class="active-pro">
-        <md-icon>unarchive</md-icon>
-        <p>Upgrade to PRO</p>
+        <md-button class="md-icon-button" @click.prevent="logout">
+           <md-icon>unarchive</md-icon>
+           <p>Sair</p>
+        </md-button> 
       </sidebar-link>
     </side-bar>
     
