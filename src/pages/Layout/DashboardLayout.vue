@@ -4,11 +4,6 @@
 
     <side-bar v-if="$auth.isAuthenticated">
       <mobile-menu slot="content"></mobile-menu>
-      <div>
-        <img :src="$auth.user.picture">
-        <h2>{{ $auth.user.name }}</h2>
-        <p>{{ $auth.user.email }}</p>
-      </div>
       <sidebar-link to="/user">
         <md-icon>person</md-icon>
         <p>Meu Perfil</p>
