@@ -332,8 +332,11 @@
 
 .md-card-profile,
 .card-testimonial{
-    margin-top: 30px;
+    margin-top: 60px;
     text-align: center;
+    background: transparent !important;
+    color: #eae8e8 !important;
+    box-shadow: none !important;
 
     .btn-just-icon.btn-raised{
         margin-left: 6px;
