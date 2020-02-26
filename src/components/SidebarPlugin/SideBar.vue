@@ -5,20 +5,16 @@
     :data-image="backgroundImage"
     :style="sidebarStyle"
   >
-    <div class="logo">
-      <a href="#" class="simple-text logo-mini">
-        <div class="logo-img">
-          <img :src="imgLogo" alt="" />
+    <div class="logo" v-if="$auth.isAuthenticated">
+      <md-card class="md-card-profile">
+        <div class="md-card-avatar">
+          <img class="img" :src="$auth.user.picture" />
         </div>
-      </a>
-
-      <a
-        href="https://www.creative-tim.com/product/vue-material-dashboard"
-        target="_blank"
-        class="simple-text logo-normal"
-      >
-        {{ title }}
-      </a>
+        <div>
+          <h6>{{ $auth.user.email }}</h6>
+          <h4>{{ $auth.user.name }}</h4>
+        </div>
+      </md-card>
     </div>
     <div class="sidebar-wrapper">
       <slot name="content"></slot>
