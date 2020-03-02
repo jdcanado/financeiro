@@ -11,8 +11,8 @@
           <img class="img" :src="$auth.user.picture" />
         </div>
         <div>
-          <h6>{{ $auth.user.email }}</h6>
-          <h4>{{ $auth.user.name }}</h4>
+          <h5>{{ $auth.user.name }}</h5>
+          <h4>{{ $auth.user.email }}</h4>
         </div>
       </md-card>
     </div>
