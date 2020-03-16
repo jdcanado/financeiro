@@ -16,6 +16,17 @@
         </div>
       </md-card>
     </div>
+    <div class="logo" v-if="!$auth.isAuthenticated">
+      <md-card class="md-card-profile">
+        <div class="md-card-avatar">
+          <img class="img" :src="imgLogo" />
+        </div>
+        <div>
+          <h4>JDC Financeiro</h4>
+          <h5>Esqueceu a senha? Clique aqui</h5>
+        </div>
+      </md-card>
+    </div>
     <div class="sidebar-wrapper">
       <slot name="content"></slot>
       <md-list class="nav">
@@ -51,7 +62,7 @@ export default {
     },
     imgLogo: {
       type: String,
-      default: require("@/assets/img/vue-logo.png")
+      default: require("@/assets/img/logo_jdcanado_editado_quadrado_cubo.png")
     },
     activeColor: {
       type: String,
