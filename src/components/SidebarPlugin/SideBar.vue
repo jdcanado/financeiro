@@ -11,8 +11,8 @@
           <img class="img" :src="$auth.user.picture" />
         </div>
         <div>
-          <h4>{{ $auth.user.name }}</h4>
-          <h5>{{ $auth.user.email }}</h5>
+          <h2>{{ $auth.user.name }}</h2>
+          <h6>{{ $auth.user.email }}</h6>
         </div>
       </md-card>
     </div>
@@ -22,8 +22,8 @@
           <img class="img" :src="imgLogo" />
         </div>
         <div>
-          <h4>JDC Financeiro</h4>
-          <h5>Esqueceu a senha? Clique aqui</h5>
+          <h3 style="font-family: 'Special Elite', cursive;">JDC Financeiro</h3>
+          <div>Esqueceu a senha?</div><a>Clique aqui</a>
         </div>
       </md-card>
     </div>
@@ -55,6 +55,10 @@ export default {
     title: {
       type: String,
       default: "Vue MD"
+    },
+    fontLogo: {
+      type: String,
+      default: "Special Elite"
     },
     backgroundImage: {
       type: String,
@@ -91,7 +95,12 @@ export default {
       return {
         backgroundImage: `url(${this.backgroundImage})`
       };
-    }
+    },
+    logoStyle() {
+      return {
+        fontFamily: `url(${this.fontLogo})`
+      };
+    }	
   }
 };
 </script>
@@ -101,4 +110,5 @@ export default {
     display: none;
   }
 }
+@import url("https://fonts.googleapis.com/css?family=Special+Elite&display=swap");
 </style>
