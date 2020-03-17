@@ -16,40 +16,12 @@
         <md-icon>content_paste</md-icon>
         <p>Tabela</p>
       </sidebar-link>
-      <sidebar-link to="/typography">
-        <md-icon>library_books</md-icon>
-        <p>Typography</p>
-      </sidebar-link>
-      <sidebar-link to="/icons">
-        <md-icon>bubble_chart</md-icon>
-        <p>Icons</p>
-      </sidebar-link>
-      <sidebar-link to="/maps">
-        <md-icon>location_on</md-icon>
-        <p>Maps</p>
-      </sidebar-link>
-      <sidebar-link to="/notifications">
-        <md-icon>notifications</md-icon>
-        <p>Notifications</p>
-      </sidebar-link>
-      <sidebar-link to="/upgrade" class="active-pro">
-        <md-button class="md-icon-button" @click.prevent="logout">
-           <md-icon>unarchive</md-icon>
-           <p>Sair</p>
-        </md-button> 
-      </sidebar-link>
     </side-bar>
-    
+
     <side-bar v-if="!$auth.isAuthenticated && !$auth.loading">
       <mobile-menu slot="content"></mobile-menu>
-        <sidebar-link to="/login">
-	   <md-button class="md-icon-button" @click.prevent="login">
-              <md-icon>person</md-icon>
-              <p>Entrar</p>
-           </md-button>
-        </sidebar-link>
     </side-bar>
-    
+
     <div class="main-panel">
       <top-navbar></top-navbar>
 
@@ -73,14 +45,6 @@ export default {
     ContentFooter,
     MobileMenu
   },
-  methods: {
-    login(){
-      this.$auth.loginWithRedirect();
-    },
-    logout(){
-      this.$auth.logout();
-      this.$router.push({ path: "/" });
-    }
-  }
+  
 };
 </script>

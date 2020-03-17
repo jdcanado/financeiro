@@ -11,8 +11,8 @@
           <img class="img" :src="$auth.user.picture" />
         </div>
         <div>
-          <h2>{{ $auth.user.name }}</h2>
-          <h6>{{ $auth.user.email }}</h6>
+          <h4 style="font-family: 'Special Elite', cursive;">{{ $auth.user.name }}</h4>
+          <div>{{ $auth.user.email }}</div><md-button @click.prevent="logout" class="md-accent">Clique aqui para sair!</md-button>
         </div>
       </md-card>
     </div>
@@ -23,7 +23,7 @@
         </div>
         <div>
           <h3 style="font-family: 'Special Elite', cursive;">JDC Financeiro</h3>
-          <div>Esqueceu a senha?</div><a>Clique aqui</a>
+          <div>Você não está logado!</div><md-button @click.prevent="login" class="md-primary">Clique aqui para entrar!</md-button>
         </div>
       </md-card>
     </div>
@@ -101,6 +101,15 @@ export default {
         fontFamily: `url(${this.fontLogo})`
       };
     }	
+  },
+  methods: {
+    login(){
+      this.$auth.loginWithRedirect();
+    },
+    logout(){
+      this.$auth.logout();
+      this.$router.push({ path: "/" });
+    }
   }
 };
 </script>
