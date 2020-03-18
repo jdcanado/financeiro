@@ -12,9 +12,9 @@
         <md-icon>dashboard</md-icon>
         <p>Resumo</p>
       </sidebar-link>      
-      <sidebar-link to="/table">
-        <md-icon>content_paste</md-icon>
-        <p>Tabela</p>
+      <sidebar-link to="/configuracoes">
+        <md-icon>settings</md-icon>
+        <p>Configurações</p>
       </sidebar-link>
     </side-bar>
 
